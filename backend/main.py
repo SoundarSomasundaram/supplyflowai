@@ -23,6 +23,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def read_root():
+    return {"status": "Flowchain AI Backend is active and running"}
+
 @app.post("/api/analyze-csv")
 async def analyze_csv(
     file: UploadFile = File(...),
