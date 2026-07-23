@@ -91,8 +91,9 @@ export default function Workspace() {
     if (product) formData.append('product', product.trim());
     if (warehouse) formData.append('warehouse', warehouse.trim());
 
+    const cleanBaseUrl = API_BASE_URL.replace(/\/+$/, '');
     try {
-      const response = await axios.post(`${API_BASE_URL}/api/analyze-csv`, formData, {
+      const response = await axios.post(`${cleanBaseUrl}/api/analyze-csv`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
