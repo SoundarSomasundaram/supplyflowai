@@ -1,0 +1,25 @@
+# Node modules & builds
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Python compilation files & envs
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.env
+
+# IDEs & System files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
